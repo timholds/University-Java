@@ -1,0 +1,37 @@
+import java.awt.Color; // need this to be able to use Color
+public class Lion extends Critter {
+  public Lion(boolean grizzly) {
+     this.
+  }
+    
+  //a lion will eat if it has been in a fight  
+  public boolean eat() {
+    //how can we test if the lion has been in a fight?
+    if (return true;
+  }
+  //a lion will roar against a bear, and pounce on anyone else
+  public Attack fight(String opponent) {
+    if 
+      return Attack.ROAR;
+    else
+      return Attack.POUNCE;
+ }
+  //method to return red as the color for a lion
+  public Color getColor() {
+    
+    return Color.RED;
+    }
+  }
+  /*instance method that moves the lion south 5 times, then west 5 times
+  then north 5 times, then east 5 times */
+  public Direction getMove() {
+    /*how can do this? */
+    return Direction.WEST;
+  }
+
+  //method to return L for the Lion Object
+  public String toString() {
+    return "L";
+  } 
+  
+}

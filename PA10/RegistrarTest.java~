@@ -1,0 +1,30 @@
+import java.awt.Color; // need this to be able to use Color
+public class Bear extends Critter {
+  public boolean eat() {
+    return false;
+  }
+
+  public Attack fight(String opponent) {
+    return Attack.SCRATCH;
+ }
+
+  public Color getColor() {
+    if (grizzly == true) {
+      return new Color(190,110,50) 
+    }
+    else if (grizzly == false) { 
+      //return white as the color for a polar bear
+      return Color.WHITE;
+    }
+ }
+
+  public Direction getMove() {
+    return Direction.CENTER;
+ }
+
+  public String toString() {
+    return "?";
+ }
+  
+  public Bear(boolean grizzly)
+}

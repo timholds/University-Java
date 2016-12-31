@@ -1,0 +1,40 @@
+import java.awt.Color; // need this to be able to use Color
+public class Torero extends Critter {
+  //Where does the parameter grizzly get passed in from? 
+  //What would the constructor have to have?
+  //Constructor for the lion object using the int parameter hunger
+  public Torero () {
+     this.tiger
+  }
+    
+  //returns true the first hunger times it is called, and false after that
+  //do we need to increment hunger after we call it once?
+  public boolean eat() {
+    if (hunger == 1) {
+      return true;
+    }
+    else if (hunger > 1) {
+      return false;;
+    }
+  }
+  //a bear always goes for scratch in a fight
+  public Attack fight(String opponent) {
+    return Attack.SCRATCH;
+ }
+  //return the color yellow for the tiger
+  public Color getColor() {
+    return Color.YELLOW;
+  }
+  //instance method that moves the bear north and west in alternating fashion
+  public Direction getMove() {
+    /*how can we alternate north and west? I think we would have to do north
+    if last move was west, and west if last move was north. Can we tell what our 
+    last move was? */
+    return Direction.WEST;
+  }
+
+  public String toString() {
+    return "B";
+  }
+  
+}

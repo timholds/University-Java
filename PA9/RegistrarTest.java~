@@ -1,0 +1,43 @@
+/* File: Registrar.java
+ * Author: Henry Quevedo & Tim Holdsworth
+ * Date: November 21, 2016
+ * Description: A class that tests the Registrar and Student classes.
+ */
+public class RegistrarTest {
+    public static void main(String[] args) {
+        Registrar USD = new Registrar(1);
+        USD.addStudent("Amy");
+        USD.addStudent("Tom", 2);
+        USD.addStudent("John", 33);
+        
+        System.out.println(USD.overallGpa() + " should be 0.");
+        
+        USD.addClass("John", 3.0, "A+");
+        System.out.println(USD.gpa("John") + " should be 4.0.");
+        System.out.println(USD.getUnits("John") + " should be 36.0.");
+        
+        USD.addTransferredClass("Amy", 3);
+        System.out.println(USD.overallGpa() + " should be 4.0");
+        
+        System.out.println("The following line should be all -1 or null");
+        System.out.println(USD.getId("Jack")+ " " + 
+                USD.getHighestGrade("Jack") + " " +
+                USD.getUnits("Jack") + " " + USD.gpa("Jack") + " " +
+                USD.getName(1002525));
+        
+        System.out.println("None should be Tom's high grade: " +
+                USD.getHighestGrade("Tom"));
+        System.out.println("1000000 should be Amy's ID: " + USD.getId("Amy"));
+        System.out.println("Jon should be name: " +
+                USD.getName(USD.getId("Tom") + 1));
+        
+        Student s1 = new Student();
+        System.out.println(s1);
+        s1.setName("Jamie");
+        s1.addClass(3.0, "A");
+        s1.addTransferredClass(2.0);
+        s1.addClass(3.0, "F");
+        System.out.println(s1);
+    }
+    
+}
